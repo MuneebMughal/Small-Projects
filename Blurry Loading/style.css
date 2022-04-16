@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+.bg{
+    background: url('https://cdn.wallpapersafari.com/69/85/aB7NwP.jpg') no-repeat center center/cover;
+    position: absolute;
+    top: -60px;
+    left: -60px;
+    width: calc(100vw + 90px);
+    height: calc(100vh + 90px);
+    z-index: -1;
+    filter: blur(30px);
+}
+.loading-text{
+    font-size: 50px;
+    color: white;
+}
