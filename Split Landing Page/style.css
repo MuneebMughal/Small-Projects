@@ -1,0 +1,122 @@
+:root {
+  --left-bg-color: rgba(87, 84, 236, 0.7);
+  --right-bg-color: rgba(43, 43, 43, 0.8);
+  --left-btn-color: rgb(87, 84, 236);
+  --right-btn-color: rgb(43, 151, 0);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+.container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background-color: #333;
+}
+.split {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  overflow: hidden;
+  top: 0;
+}
+.split.left {
+  left: 0;
+  background: url("https://tellme.ng/wp-content/uploads/2021/02/PlayStation-5.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.split.left::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: var(--left-bg-color);
+}
+.split.right::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: var(--right-bg-color);
+}
+.split.right {
+  right: 0;
+  background: url("https://m.media-amazon.com/images/I/61k6+cNM-mL._SL1500_.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+h1{
+    font-size: 4rem;
+    color: white;
+    position: absolute;
+    top:20%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    transition: all 0.5s ease;
+}
+.btn{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15rem;
+    border: 0.2rem solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    padding: 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+}
+.split.left .btn:hover{
+    background-color: var(--left-btn-color);
+}
+.split.right .btn:hover{
+    background-color: var(--right-btn-color);
+}
+.container.hover-left .split.left{
+    width: 75%;
+}
+.container.hover-left .split.right{
+    width: 25%;
+}
+.container.hover-right .split.right{
+    width: 75%;
+}
+.container.hover-right .split.left{
+    width: 25%;
+}
+
+.split.left,.split.right,.hover-left,.hover-right {
+    transition: all 1s ease-in-out;
+}
+.container.hover-left .split.right .btn{
+    padding: 1rem;
+    font-size: 0.8rem;
+    width: 10rem;
+}
+.container.hover-left .split.right h1{
+    font-size: 2.5rem;
+    top: 30%;
+}
+.container.hover-right .split.left .btn{
+    padding: 1rem;
+    font-size: 0.8rem;
+    width: 10rem;
+}
+.container.hover-right .split.left h1{
+    font-size: 2.5rem;
+    top: 30%;
+}
