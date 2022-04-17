@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+body {
+background-color: rgb(255, 244, 224);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+}
+h1{
+    margin: 10px;
+    font-size: 45px;
+}
+.box{
+    height: 200px;
+    width: 400px;
+    background-color: steelblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 2px 4px 5px rgb(0,0,0,0.3);
+    transform: translateX(300%);
+    transition: transform 0.4s ease;
+}
+.box:nth-of-type(even){
+    transform: translateX(-300%);
+}
+.box.show{
+    transform: translateX(0);
+}
