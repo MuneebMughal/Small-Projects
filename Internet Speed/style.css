@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body {
-  height: 100vh;
+  height: 99vh;
   background: linear-gradient(45deg, #14222e, #2c3c4a);
   color: #eaeaea;
   font-family: "Dongle", sans-serif;

@@ -24,7 +24,7 @@ document.querySelector("button").addEventListener("click", (e) => {
         document.querySelector(".content").innerHTML =
           speed + "<small>Mbps</small>";
       }
-      i += 1.02;
+      i += 1.01;
     };
     animate();
     document.querySelector(".loader-content").classList.remove("hide");
