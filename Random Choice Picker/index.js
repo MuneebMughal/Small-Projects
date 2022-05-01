@@ -32,8 +32,10 @@ function selectRandomTag() {
   }, 100);
   setTimeout(() => {
     clearInterval(interval);
-    const randomTag =
-      tagsEl.childNodes[Math.floor(Math.random() * tagsEl.childNodes.length)];
-    randomTag.classList.add("selected");
+    setTimeout(() => {
+      const randomTag =
+        tagsEl.childNodes[Math.floor(Math.random() * tagsEl.childNodes.length)];
+      randomTag.classList.add("selected");
+    }, 100);
   }, 3000);
 }
