@@ -1,0 +1,56 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #f0f0f0f0;
+}
+h1{
+    margin: 50px;
+    text-align: center;
+}
+.container{
+    max-width: 600px;
+    margin: 0 auto;
+}
+.faq{
+    background-color: transparent;
+    border: 1px solid rgb(104, 104, 104);
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 30px 50px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+.faq.active{
+    background-color: white;
+}
+.faq .text{
+    display: none;
+}
+.faq.active .text{
+    display: block;
+}
+.toggle-btn{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: lightgrey;
+    border: 0;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    color: white;
+}
+.faq .toggle-btn .fa-times{
+    display: none;
+}
+.faq.active .toggle-btn .fa-times{
+    display: block;
+}
+.faq.active .toggle-btn .fa-chevron-down{
+   display: none;
+}
